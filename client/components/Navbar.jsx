@@ -36,25 +36,32 @@ const Navbar = () => {
       <div
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8 z-[2]`}
       >
-        {/* Search Img */}
-        <img
-          src="/thunder-cloud.svg"
-          alt="search"
-          className="w-[24px] h-[24px] object-contain"
-        />
+        {/* Thunder Cloud Img */}
+        <div>
+        <a href="#home" onClick={() => handleLinkClick('Home')}>
+          <img
+            src="/thunder-cloud.svg"
+            alt="logo"
+            className="w-[24px] h-[24px] object-contain"
+          />
+        </a> 
+        </div>
+        {/* Thunder Cloud Img */}
         {/* Nav Heading */}
         <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
           <a href="#home" onClick={() => handleLinkClick('Home')}>
             CLOUDY
           </a>          
         </h2>
+        {/* Nav Heading */}
         {/* Menu Img */}
         <img
           src={toggle ? '/close.svg' : '/menu.svg'}
           alt="menu"
-          className="w-[24px] h-[24px] object-contain"
+          className="w-[24px] h-[24px] object-contain cursor-pointer"
           onClick={() => setToggle(!toggle)}
         />
+        {/* Menu Img */}
       </div>
 
       {/* Menu View */}

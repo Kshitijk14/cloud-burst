@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link'
+
 import { motion } from 'framer-motion';
 import { socials } from '../constants';
 
@@ -19,7 +21,7 @@ const Footer = () => (
         <h4 className="font-bold md:text-[64px] text-[44px] text-white">
           Stay Ahead, Stay Safe
         </h4>
-        <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
+        <Link href='/try' className="flex items-center h-fit py-4 px-6 bg-[#323F5D] rounded-[32px] gap-[12px]">
           <img
             src="/thunder-cloud.svg"
             alt="thunder-cloud"
@@ -28,7 +30,17 @@ const Footer = () => (
           <span className="font-normal text-[16px] text-white">
             Try for Free Now
           </span>
-        </button>
+        </Link>
+        {/* <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
+          <img
+            src="/thunder-cloud.svg"
+            alt="thunder-cloud"
+            className="w-[24px] h-[24px] object-contain"
+          />
+          <span className="font-normal text-[16px] text-white">
+            Try for Free Now
+          </span>
+        </button> */}
       </div>
 
       <div className="flex flex-col">

@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 
 import { fadeIn } from '../utils/motion';
@@ -17,21 +19,23 @@ const InsightCard = ({ imgUrl, title, subtitle, index }) => (
     <div className="w-full flex justify-between items-center">
       <div className="flex-1 md:ml-[62px] flex flex-col max-w-[650px]">
         <h4 className="font-normal lg:text-[42px] text-[26px] text-white">
-          {title}
+          <Link href='/blog'>
+            {title}
+          </Link>
         </h4>
         <p className="mt-[16px] font-normal lg:text-[20px] text-[14px] text-secondary-white">
           {subtitle}
         </p>
       </div>
 
-      <div
-        className="lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full bg-transparent border-[1px] border-white"
-      >
-        <img
-          src="/arrow.svg"
-          alt="arrow"
-          className="w-[40%] h-[40%] object-contain"
-        />
+      <div className="lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full bg-transparent border-[1px] border-white">
+        <Link href='/blog' className='flex items-center justify-center'>
+          <img
+            src="/arrow.svg"
+            alt="arrow"
+            className="w-[80%] h-[80%] object-contain"
+          />
+        </Link>
       </div>
     </div>
   </motion.div>

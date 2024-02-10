@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 
 import styles from '../styles';
@@ -27,6 +29,16 @@ const WhatsNew = () => (
             <NewFeatures key={feature.title} {...feature} />
           ))}
         </div>
+        <Link href='/try' className="flex items-center justify-center h-fit w-[600px] mx-auto py-4 px-6 bg-[#323F5D] rounded-[32px] gap-[12px] mt-8">
+          <img
+            src="/thunder-cloud.svg"
+            alt="thunder-cloud"
+            className="w-[24px] h-[24px] object-contain"
+          />
+          <span className="font-normal text-[16px] text-white">
+            Try Now
+          </span>
+        </Link>
       </motion.div>
 
       <motion.div
